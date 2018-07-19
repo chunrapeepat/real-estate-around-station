@@ -1,0 +1,37 @@
+[
+ {
+   "unit_type_id": 1,
+   "unit_type_name_th": "บ้านเดี่ยว",
+   "unit_type_name_en": "Detached_House"
+ },
+ {
+   "unit_type_id": 2,
+   "unit_type_name_th": "บ้านแฝด",
+   "unit_type_name_en": "Semi_Detached_House"
+ },
+ {
+   "unit_type_id": 3,
+   "unit_type_name_th": "คอนโดมิเนียม",
+   "unit_type_name_en": "Condominium"
+ },
+ {
+   "unit_type_id": 4,
+   "unit_type_name_th": "ทาวน์โฮม",
+   "unit_type_name_en": "Townhome"
+ },
+ {
+   "unit_type_id": 5,
+   "unit_type_name_th": "โฮมออฟฟิส",
+   "unit_type_name_en": "Home_Office"
+ },
+ {
+   "unit_type_id": 6,
+   "unit_type_name_th": "อาคารพาณิชย์",
+   "unit_type_name_en": "Shophouse"
+ },
+ {
+   "unit_type_id": 7,
+   "unit_type_name_th": "ที่ดิน",
+   "unit_type_name_en": "Land"
+ }
+]
