@@ -6,7 +6,7 @@ const Container = styled.div`
 	top: 0;
 	width: 100vw;
 	background-color: black;
-	z-index: 99999999;
+	z-index: 999;
 	padding: 10px 30px;
 
 	& > h1 {

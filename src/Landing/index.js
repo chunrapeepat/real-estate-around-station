@@ -8,6 +8,9 @@ import App from "../common/App"
 
 import Navbar from "../components/Navbar"
 import MapPin from "../components/MapPin"
+import ContentDialog from "../components/ContentDialog"
+
+import demoFancyMapStyles from "../assets/demoFancyMapStyles"
 
 const MyMapComponent = compose(
 	withProps({
@@ -19,8 +22,8 @@ const MyMapComponent = compose(
 	withScriptjs,
 	withGoogleMap,
 )((props) => (
-	<GoogleMap {...props}>
-		<MapPin position={{lat: 62.400471, lng: -150.005608}} />
+	<GoogleMap defaultOptions={{styles: demoFancyMapStyles}} {...props}>
+		<MapPin unitType={6} position={{lat: 62.400471, lng: -150.005608}} />
 		{/* {projectMain.map((project, i) => {
 			return <MapPin key={`project_${i}`} position={{lat: project.lat, lng: project.lon}} />
 		})} */}
@@ -36,6 +39,7 @@ class LandingPage extends Component {
 		return (
 			<div>
 				<Navbar />
+				<ContentDialog heading="สถานีรถไฟฟ้าหมอชิต" />
 				<MyMapComponent
 					defaultZoom={8}
 					defaultCenter={{lat: 62.400471, lng: -150.005608}}
