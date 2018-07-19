@@ -3,9 +3,11 @@ import {compose, withProps} from "recompose"
 import {withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps"
 
 import projectMain from "../assets/projectMain"
-import MapPin from "../components/MapPin"
 import {mapAPIKey} from "../common/config"
 import App from "../common/App"
+
+import Navbar from "../components/Navbar"
+import MapPin from "../components/MapPin"
 
 const MyMapComponent = compose(
 	withProps({
@@ -33,6 +35,7 @@ class LandingPage extends Component {
 	render() {
 		return (
 			<div>
+				<Navbar />
 				<MyMapComponent
 					defaultZoom={8}
 					defaultCenter={{lat: 62.400471, lng: -150.005608}}
