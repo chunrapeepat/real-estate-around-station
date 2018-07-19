@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import {compose, withProps} from "recompose"
 import {withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps"
 
+import MapPin from "../components/MapPin"
 import {mapAPIKey} from "../common/config"
 import App from "../common/App"
 
@@ -16,12 +17,7 @@ const MyMapComponent = compose(
 	withGoogleMap,
 )((props) => (
 	<GoogleMap {...props}>
-		{props.isMarkerShown && (
-			<Marker
-				position={{lat: -34.397, lng: 150.644}}
-				onClick={props.onMarkerClick}
-			/>
-		)}
+		<MapPin position={{lat: 62.400471, lng: -150.005608}} />
 	</GoogleMap>
 ))
 
@@ -30,20 +26,12 @@ class LandingPage extends Component {
 		lat: -34.397,
 	}
 
-	componentDidMount() {
-		setTimeout(() => {
-			alert("update")
-			this.setState({lat: -30.397})
-		}, 5000)
-	}
-
 	render() {
 		return (
 			<div>
 				<MyMapComponent
 					defaultZoom={8}
-					center={{lat: this.state.lat, lng: 150.644}}
-					defaultCenter={{lat: this.state.lat, lng: 150.644}}
+					defaultCenter={{lat: 62.400471, lng: -150.005608}}
 				/>
 			</div>
 		)
