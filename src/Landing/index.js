@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import {compose, withProps} from "recompose"
 import {withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps"
 
+import projectMain from "../assets/projectMain"
 import MapPin from "../components/MapPin"
 import {mapAPIKey} from "../common/config"
 import App from "../common/App"
@@ -18,6 +19,9 @@ const MyMapComponent = compose(
 )((props) => (
 	<GoogleMap {...props}>
 		<MapPin position={{lat: 62.400471, lng: -150.005608}} />
+		{/* {projectMain.map((project, i) => {
+			return <MapPin key={`project_${i}`} position={{lat: project.lat, lng: project.lon}} />
+		})} */}
 	</GoogleMap>
 ))
 

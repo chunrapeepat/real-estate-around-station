@@ -4,6 +4,9 @@ import {Provider} from "react-redux"
 import {createStore} from "redux"
 import {injectGlobal} from "styled-components"
 
+// antd stylesheet
+import "antd/dist/antd.css"
+
 // inject global css style
 const enhance = lifecycle({
 	componentWillMount() {
@@ -13,6 +16,7 @@ const enhance = lifecycle({
       }
       * {
         box-sizing: border-box;
+				font-family: 'Kanit', sans-serif;
       }
     `
 	},
