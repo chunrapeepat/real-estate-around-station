@@ -26,6 +26,6 @@ const Heading = styled.h1`
 export default ({heading, children}) => (
 	<Container>
 		<Heading>{heading}</Heading>
-		Hello world
+		<div>{children}</div>
 	</Container>
 )

@@ -8,6 +8,7 @@ import App from "../common/App"
 
 import Navbar from "../components/Navbar"
 import MapPin from "../components/MapPin"
+import ResultCard from "../components/ResultCard"
 import ContentDialog from "../components/ContentDialog"
 
 import demoFancyMapStyles from "../assets/demoFancyMapStyles"
@@ -39,7 +40,9 @@ class LandingPage extends Component {
 		return (
 			<div>
 				<Navbar />
-				<ContentDialog heading="สถานีรถไฟฟ้าหมอชิต" />
+				<ContentDialog heading="สถานีรถไฟฟ้าหมอชิต">
+					<ResultCard />
+				</ContentDialog>
 				<MyMapComponent
 					defaultZoom={8}
 					defaultCenter={{lat: 62.400471, lng: -150.005608}}
